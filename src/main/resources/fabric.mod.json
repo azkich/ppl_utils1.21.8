@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ppl_utils",
+  "version": "${version}",
+  "name": "ppl_utils",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/ppl_utils/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.bleudev.ppl_utils.client.Ppl_utilsClient"
+    ],
+    "main": [
+      "com.bleudev.ppl_utils.Ppl_utils"
+    ]
+  },
+  "mixins": [
+    "ppl_utils.mixins.json",
+    {
+      "config": "ppl_utils.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-language-kotlin": ">=${kotlin_loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
