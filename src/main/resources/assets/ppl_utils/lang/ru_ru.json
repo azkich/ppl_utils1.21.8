@@ -1,0 +1,5 @@
+{
+  "text.ppl_utils.game_menu.lobby_button.tooltip": "Отправиться в лобби",
+  "ppl_utils.midnightconfig.lobby_button_enabled": "Включить лобби-кнопку",
+  "ppl_utils.midnightconfig.lobby_button_tooltip_enabled": "Показывать подсказку при наведении на лобби-кнопку"
+}

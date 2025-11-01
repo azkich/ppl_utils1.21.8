@@ -1,0 +1,5 @@
+{
+  "text.ppl_utils.game_menu.lobby_button.tooltip": "Go to the lobby",
+  "ppl_utils.midnightconfig.lobby_button_enabled": "Enable lobby button",
+  "ppl_utils.midnightconfig.lobby_button_tooltip_enabled": "Enable lobby button tooltip"
+}
