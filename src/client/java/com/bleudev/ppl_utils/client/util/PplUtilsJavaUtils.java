@@ -8,7 +8,11 @@ import java.util.List;
 import java.util.Objects;
 
 public class PplUtilsJavaUtils {
-    public static final List<String> SUPPORTS_LOBBY_COMMAND_IPS = List.of("play.pepeland.net");
+    public static final List<String> SUPPORTS_LOBBY_COMMAND_IPS = List.of(
+        "play.pepeland.net",
+        "issues.pepeland.net",
+        "issues2.pepeland.net"
+    );
 
     public static boolean isClientOnServerSupportsLobbyCommand(MinecraftClient client) {
         final var server = client.getCurrentServerEntry();
