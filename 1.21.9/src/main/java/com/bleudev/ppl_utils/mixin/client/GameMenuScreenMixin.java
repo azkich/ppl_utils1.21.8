@@ -35,6 +35,6 @@ public abstract class GameMenuScreenMixin extends Screen {
 
     @Inject(method = "initWidgets", at = @At("RETURN"))
     private void addLobbyButton(CallbackInfo ci) {
-        if (PplUtilsConfig.lobby_button_enabled) drawLobbyButton();
+        if (PplUtilsConfig.lobby_button_enabled && ServerUtils.isClientOnServerSupportsLobbyCommand()) drawLobbyButton();
     }
 }
