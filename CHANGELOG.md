@@ -4,9 +4,6 @@
 ## New features
 [+] World border size debug hud entry (thanks `wiihxhx` for idea)\
 [+] Beta mode
+[+] Set logo, description, links, badges and other metadata
 ## Updates
 [+] Updated lobby button rendering
-
-# 1.0
-## New features
-[+] Lobby button
