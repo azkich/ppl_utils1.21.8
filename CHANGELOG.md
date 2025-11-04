@@ -1,3 +1,7 @@
+# 2.2
+## New features
+[+] `Go to the lobby` key
+
 # 2.1
 ## Minecraft updates
 [+] Update for 1.21.6-1.21.8
