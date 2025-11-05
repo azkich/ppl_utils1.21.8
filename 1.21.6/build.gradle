@@ -65,6 +65,8 @@ processResources {
     inputs.property "loader_version", project.loader_version
     inputs.property "fabric_version", project.fabric_version
     inputs.property "midnightLib_version", project.midnightLib_version
+    inputs.property "modMenu_version", project.modMenu_version
+    inputs.property "modMenuBadges_version", project.modMenuBadges_version
     filteringCharset "UTF-8"
 
     filesMatching("fabric.mod.json") {
@@ -73,7 +75,9 @@ processResources {
                 "max_exclusive_minecraft_version": project.max_exclusive_minecraft_version,
                 "loader_version": project.loader_version,
                 "fabric_version": project.fabric_version,
-                "midnightLib_version": project.midnightLib_version
+                "midnightLib_version": project.midnightLib_version,
+                "modMenu_version": project.modMenu_version,
+                "modMenuBadges_version": project.modMenuBadges_version
     }
 }
 
