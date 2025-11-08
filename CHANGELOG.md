@@ -1,6 +1,6 @@
 # 2.3.1
 ## Bug fixes
-[/] Specified players join/leave messages doesn't appear with ChatHeads
+[/] Specified players join/leave messages doesn't appear with [Chat Heads](https://modrinth.com/mod/chat-heads) (bleudev [#7](https://github.com/bleudev/ppl_utils/pull/7))
 
 # 2.3
 ## New features
