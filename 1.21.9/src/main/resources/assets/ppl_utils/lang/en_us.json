@@ -6,8 +6,10 @@
   "key.category.ppl_utils.general": "Pepeland Utils",
   "key.ppl_utils.go_to_lobby": "Go to the lobby",
 
+  "ppl_utils.midnightconfig.lobby_button_comment": "Lobby button",
   "ppl_utils.midnightconfig.lobby_button_enabled": "Enable lobby button",
   "ppl_utils.midnightconfig.lobby_button_tooltip_enabled": "Enable lobby button tooltip",
+  "ppl_utils.midnightconfig.join_leave_messages_rendering_comment": "Join/leave messages rendering",
   "ppl_utils.midnightconfig.do_join_leave_messages_rendering": "Do join/leave messages rendering",
   "ppl_utils.midnightconfig.always_show_join_leave_messages_by": "Always show join/leave messages for these players"
 }

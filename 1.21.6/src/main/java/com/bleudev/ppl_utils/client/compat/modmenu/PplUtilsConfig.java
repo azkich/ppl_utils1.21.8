@@ -9,15 +9,19 @@ import java.util.List;
 import static com.bleudev.ppl_utils.PplUtilsConst.MOD_ID;
 
 public class PplUtilsConfig extends MidnightConfig {
+    @Comment(centered = true)
+    public static Comment lobby_button_comment;
     @Entry
     public static boolean lobby_button_enabled = true;
     @Condition(requiredOption = "lobby_button_enabled")
     @Entry
     public static boolean lobby_button_tooltip_enabled = true;
+
+    @Comment(centered = true)
+    public static Comment join_leave_messages_rendering_comment;
     @Entry
     public static boolean do_join_leave_messages_rendering = true;
-
-    @Condition(requiredOption = "do_join_leave_messages_rendering", requiredValue = "false")
+    @Condition(requiredOption = "do_join_leave_messages_rendering", requiredValue = "false", visibleButLocked = true)
     @Entry
     public static List<String> always_show_join_leave_messages_by = Lists.newArrayList();
 
