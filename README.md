@@ -11,9 +11,9 @@ Mod which provides some useful features for Pepeland players
 
 #### Current list of features
 - Lobby button in game menu (or with key)
-- World border size debug hud entry (thanks `wiihxhx` for idea)
-- Ability to disable join/leave messages rendering
-- Restart indicator (client side boss bar)
+- World border size debug hud entry (thanks `wiihxhx` for idea) `(2.0+)`
+- Ability to disable join/leave messages rendering `(2.2+)`
+- Restart indicator (client side boss bar) `(2.5+)`
 
 <details>
 <summary>Описание на русском</summary>
@@ -25,7 +25,7 @@ Mod which provides some useful features for Pepeland players
 
 #### Текущий список функций
 - Лобби-кнопка в меню паузы
-- Радиус границы мира в F3 (спасибо `wiihxhx` за идею)
-- Возможность отключения сообщений о входе/выходе игроков
-- Индикатор рестарта сервера (клиентский босс бар)
+- Радиус границы мира в F3 (спасибо `wiihxhx` за идею) `(2.0)+`
+- Возможность отключения сообщений о входе/выходе игроков `(2.2+)`
+- Индикатор рестарта сервера (клиентский босс бар) `(2.5+)`
 </details>
