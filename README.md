@@ -14,6 +14,7 @@ Mod which provides some useful features for Pepeland players
 - World border size debug hud entry (thanks `wiihxhx` for idea) `(2.0+)`
 - Ability to disable join/leave messages rendering `(2.2+)`
 - Restart indicator (client side boss bar) `(2.5+)`
+- Ability to easily send messages into global chat without using command (with keybinds) `(2.6+)`
 
 <details>
 <summary>Описание на русском</summary>
@@ -28,4 +29,5 @@ Mod which provides some useful features for Pepeland players
 - Радиус границы мира в F3 (спасибо `wiihxhx` за идею) `(2.0)+`
 - Возможность отключения сообщений о входе/выходе игроков `(2.2+)`
 - Индикатор рестарта сервера (клиентский босс бар) `(2.5+)`
+- Возможность простой отправки сообщений в глобальный чат без использования команды (с помощью горячих клавиш) `(2.6+)`
 </details>
