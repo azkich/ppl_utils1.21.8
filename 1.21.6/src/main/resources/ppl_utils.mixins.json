@@ -8,6 +8,9 @@
         "ChatScreenMixin",
         "DebugHudMixin",
         "GameMenuScreenMixin",
+        "HandledScreenMixin",
+        "InGameHudMixin",
+        "InventoryScreenMixin",
         "PlayerListHudAccessor"
     ],
     "injectors": {
