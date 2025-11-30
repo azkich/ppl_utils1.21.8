@@ -103,12 +103,18 @@ public class PepelandUtils implements ClientModInitializer {
                     GlobalChatHelper.INSTANCE.sendToggleMessage(client);
                 } else GlobalChatHelper.INSTANCE.sendToggleErrorMessage(client);
             }
+            while (Keys.EXECUTABLE_QUEUE_KEY.wasPressed()) {
+                com.bleudev.ppl_utils.feature.executablequeue.ExecutableQueueManager.getInstance().executeQueue(client);
+            }
 
             if (client.player == null) return;
             restartHelper.update(client);
             
             // Update Always With Me feature
             com.bleudev.ppl_utils.feature.alwayswithme.AlwaysWithMeManager.getInstance().tick(client);
+            
+            // Update Executable Queue feature
+            com.bleudev.ppl_utils.feature.executablequeue.ExecutableQueueManager.getInstance().tick(client);
 
             if (GlobalChatHelper.INSTANCE.isEnabled()) {
                 if (client.inGameHud.getChatHud().isChatFocused())

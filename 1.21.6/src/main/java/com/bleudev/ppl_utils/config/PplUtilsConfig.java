@@ -107,6 +107,11 @@ public class PplUtilsConfig extends MidnightConfig {
     @Entry
     public static String always_with_me_mappings = "";
 
+    @Comment(centered = true)
+    public static Comment executable_queue_comment;
+    @Entry
+    public static String executable_queue_commands = "";
+
     @Override
     public void writeChanges(String modid) {
         super.writeChanges(modid);

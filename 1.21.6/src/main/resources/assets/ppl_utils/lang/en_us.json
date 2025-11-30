@@ -81,5 +81,8 @@
   "ppl_utils.midnightconfig.chat_filter_mode": "Filter mode",
   "ppl_utils.midnightconfig.enum.ChatFilterMode.WHITELIST": "Whitelist",
   "ppl_utils.midnightconfig.enum.ChatFilterMode.BLACKLIST": "Blacklist",
-  "ppl_utils.midnightconfig.chat_filter_words": "Filter words"
+  "ppl_utils.midnightconfig.chat_filter_words": "Filter words",
+  "ppl_utils.midnightconfig.executable_queue_comment": "Executable Queue",
+  "ppl_utils.midnightconfig.executable_queue_commands": "Commands",
+  "key.ppl_utils.executable_queue": "Execute command queue"
 }

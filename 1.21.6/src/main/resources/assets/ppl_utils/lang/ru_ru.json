@@ -81,5 +81,8 @@
   "ppl_utils.midnightconfig.chat_filter_mode": "Режим фильтра",
   "ppl_utils.midnightconfig.enum.ChatFilterMode.WHITELIST": "Белый список",
   "ppl_utils.midnightconfig.enum.ChatFilterMode.BLACKLIST": "Чёрный список",
-  "ppl_utils.midnightconfig.chat_filter_words": "Слова фильтра"
+  "ppl_utils.midnightconfig.chat_filter_words": "Слова фильтра",
+  "ppl_utils.midnightconfig.executable_queue_comment": "Выполняемая очередь",
+  "ppl_utils.midnightconfig.executable_queue_commands": "Команды",
+  "key.ppl_utils.executable_queue": "Выполнить очередь команд"
 }
