@@ -106,6 +106,9 @@ public class PepelandUtils implements ClientModInitializer {
             while (Keys.EXECUTABLE_QUEUE_KEY.wasPressed()) {
                 com.bleudev.ppl_utils.feature.executablequeue.ExecutableQueueManager.getInstance().executeQueue(client);
             }
+            while (Keys.EXECUTABLE_QUEUE_CLIPBOARD_KEY.wasPressed()) {
+                com.bleudev.ppl_utils.feature.executablequeue.ExecutableQueueManager.getInstance().executeQueueFromClipboard(client);
+            }
 
             if (client.player == null) return;
             restartHelper.update(client);

@@ -4,6 +4,7 @@ import com.bleudev.ppl_utils.PplUtilsConst;
 import com.bleudev.ppl_utils.config.PplUtilsConfig;
 import net.minecraft.client.MinecraftClient;
 import org.jetbrains.annotations.NotNull;
+import org.lwjgl.glfw.GLFW;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,7 +79,17 @@ public class ExecutableQueueManager {
     }
     
     /**
-     * Starts executing the queue of commands with delays.
+     * Gets clipboard content from GLFW.
+     */
+    @NotNull
+    private String getClipboardContent(@NotNull MinecraftClient client) {
+        long window = client.getWindow().getHandle();
+        String clipboard = GLFW.glfwGetClipboardString(window);
+        return clipboard != null ? clipboard : "";
+    }
+    
+    /**
+     * Starts executing the queue of commands with delays from config.
      * Commands are executed sequentially, waiting for the specified delay between each.
      */
     public void executeQueue(@NotNull MinecraftClient client) {
@@ -93,6 +104,33 @@ public class ExecutableQueueManager {
             return;
         }
         
+        startExecution(client, queueString);
+    }
+    
+    /**
+     * Starts executing the queue of commands with delays from clipboard.
+     * Commands are executed sequentially, waiting for the specified delay between each.
+     */
+    public void executeQueueFromClipboard(@NotNull MinecraftClient client) {
+        if (isExecuting) {
+            PplUtilsConst.LOGGER.debug("Queue is already executing, ignoring request");
+            return;
+        }
+        
+        String clipboardContent = getClipboardContent(client);
+        if (clipboardContent == null || clipboardContent.trim().isEmpty()) {
+            PplUtilsConst.LOGGER.debug("Clipboard is empty, nothing to execute");
+            return;
+        }
+        
+        PplUtilsConst.LOGGER.debug("Executing queue from clipboard: {}", clipboardContent);
+        startExecution(client, clipboardContent);
+    }
+    
+    /**
+     * Starts execution of the queue with the given string.
+     */
+    private void startExecution(@NotNull MinecraftClient client, @NotNull String queueString) {
         // Parse the queue
         executionQueue = parseQueue(queueString);
         

@@ -84,5 +84,6 @@
   "ppl_utils.midnightconfig.chat_filter_words": "Слова фильтра",
   "ppl_utils.midnightconfig.executable_queue_comment": "Выполняемая очередь",
   "ppl_utils.midnightconfig.executable_queue_commands": "Команды",
-  "key.ppl_utils.executable_queue": "Выполнить очередь команд"
+  "key.ppl_utils.executable_queue": "Выполнить очередь команд",
+  "key.ppl_utils.executable_queue_clipboard": "Выполнить очередь команд из буфера обмена"
 }
