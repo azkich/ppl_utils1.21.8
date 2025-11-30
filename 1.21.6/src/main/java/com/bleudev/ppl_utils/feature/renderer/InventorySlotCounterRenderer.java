@@ -50,7 +50,8 @@ public class InventorySlotCounterRenderer {
         // Calculate background dimensions
         int bgX = iconX - PADDING_SMALL;
         int bgY = iconY - PADDING_SMALL;
-        int bgWidth = (iconX + ICON_SIZE) - bgX + (textX + textWidth) - (iconX + ICON_SIZE) + PADDING_SMALL;
+        // Background width: from bgX to end of text + padding on the right
+        int bgWidth = (textX + textWidth) - bgX + PADDING_SMALL;
         int bgHeight = Math.max(ICON_SIZE, textHeight) + (PADDING_SMALL * 2);
         
         // Draw background
@@ -74,15 +75,17 @@ public class InventorySlotCounterRenderer {
      * @return Color code for the text
      */
     private int getTextColor(int occupiedSlots) {
-        if (occupiedSlots <= SLOT_THRESHOLD_LOW) {
+        if (occupiedSlots <= SLOT_THRESHOLD_MEDIUM) {
+            // 0-23: beige (same as 0-17)
             return COLOR_TEXT_BEIGE;
-        } else if (occupiedSlots <= SLOT_THRESHOLD_MEDIUM) {
-            return COLOR_TEXT_WHITE;
         } else if (occupiedSlots <= SLOT_THRESHOLD_HIGH) {
+            // 24-34: yellow
             return COLOR_TEXT_YELLOW;
         } else {
+            // 35-36: red
             return COLOR_TEXT_RED;
         }
     }
 }
+
 

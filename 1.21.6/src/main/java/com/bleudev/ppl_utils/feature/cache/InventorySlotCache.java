@@ -39,7 +39,7 @@ public class InventorySlotCache {
     
     /**
      * Calculates a hash of the inventory state for change detection.
-     * Uses a simple hash based on item presence.
+     * Uses position, item type, and count to ensure uniqueness even with duplicate items.
      * 
      * @param inventory The player inventory
      * @return Hash value representing inventory state
@@ -49,7 +49,15 @@ public class InventorySlotCache {
         for (int i = 0; i < TOTAL_INVENTORY_SLOTS; i++) {
             var stack = inventory.getStack(i);
             if (!stack.isEmpty()) {
-                hash = hash * 31 + stack.hashCode();
+                // Include slot position, item registry ID, and count in hash
+                // This ensures different stacks of the same item produce different hashes
+                long slotHash = (long) i * 31L;
+                long itemHash = (long) net.minecraft.registry.Registries.ITEM.getRawId(stack.getItem()) * 31L;
+                long countHash = (long) stack.getCount() * 31L;
+                hash = hash * 31L + slotHash + itemHash + countHash;
+            } else {
+                // Include empty slots too to detect when items are moved
+                hash = hash * 31L + (long) i;
             }
         }
         return hash;
@@ -79,4 +87,5 @@ public class InventorySlotCache {
         cachedOccupiedSlots = 0;
     }
 }
+
 
